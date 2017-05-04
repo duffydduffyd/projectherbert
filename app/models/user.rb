@@ -2,8 +2,8 @@
 class User < ActiveRecord::Base
 
   has_many :donations
-  has_many :children, through :donations
-  has_many :schools, through :donations
+  has_many :children, :through => :donations
+  has_many :schools, :through => :donations
 
   include BCrypt
 
