@@ -1,3 +1,4 @@
 class School < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :children
+  has_many :donations
 end

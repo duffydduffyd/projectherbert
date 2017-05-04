@@ -1,5 +1,10 @@
-require 'bcrypt'
+
 class User < ActiveRecord::Base
+
+  has_many :donations
+  has_many :children, through :donations
+  has_many :schools, through :donations
+
   include BCrypt
 
   validates :email, uniqueness: true
@@ -19,7 +24,7 @@ class User < ActiveRecord::Base
       return self
     else
       return nil
-    end 
+    end
   end
 
 end

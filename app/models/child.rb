@@ -1,3 +1,5 @@
 class Child < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :donations
+  has_many :users, through :donations
+  belongs_to :school
 end
