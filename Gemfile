@@ -12,10 +12,10 @@ gem 'activerecord', '~>4.2.0'
 
 gem 'rake'
 gem 'bcrypt'
-
+gem 'awesome_print'
 gem 'rack', '1.5.2'
 gem 'shotgun'
-
+gem 'stripe'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
