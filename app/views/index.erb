@@ -6,9 +6,8 @@
 
 <ul>
   <% @children.each do |child| %>
-    <%=
-
-
+  <p>  <%=child.blurb%> </p>
+    <%= erb :'_stripe', layout: false %>
     <%end%>
 
 </ul>
