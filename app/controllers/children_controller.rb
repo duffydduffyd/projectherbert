@@ -1,6 +1,7 @@
 # index
 get '/children' do
   @children = Child.where("donated = false")
+  erb :"index"
 end
 
 # new
@@ -15,7 +16,8 @@ end
 
 # show
 get '/children/:id' do
-
+  @child = Child.find(params[:id])
+  erb :"children/show"
 end
 
 # edit

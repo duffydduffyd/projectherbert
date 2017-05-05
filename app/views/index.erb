@@ -4,17 +4,11 @@
 <p> Herbert Niwagaba devoted his life to the children in his community. He tragically died in a collision with a truck in April, 2017. This project is in honor of him. </p>
 <p> Let's sponsor these kids and support them going to school. </p>
 
+
 <ul>
   <% @children.each do |child| %>
-  <p>  <%=child.blurb%> </p>
-  <%= erb :'_stripe', layout: false %>
-  <script
-    src="https://checkout.stripe.com/v3/checkout.js"
-    class="stripe-button"
-    data-key="<%= ENV["PUBLISHABLE_KEY"] %>"
-    data-amount="8500">
-  </script>
 
+  <%= erb :'_child_item', layout: false, locals: {child: child} %><br><li>
   <%end%>
 
 </ul>
